@@ -93,11 +93,18 @@
                 <version>${jjwt}</version>
             </dependency>
 
+            <!--阿里云OSS依赖-->
             <dependency>
-                <groupId>com.aliyun.oss</groupId>
-                <artifactId>aliyun-sdk-oss</artifactId>
-                <version>${aliyun.sdk.oss}</version>
+                <groupId>com.aliyun</groupId>
+                <artifactId>alibabacloud-oss-v2</artifactId>
+                <version>0.5.1</version>
             </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>com.aliyun.oss</groupId>-->
+<!--                <artifactId>aliyun-sdk-oss</artifactId>-->
+<!--                <version>${aliyun.sdk.oss}</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>javax.xml.bind</groupId>
@@ -121,6 +128,22 @@
                 <groupId>com.github.wechatpay-apiv3</groupId>
                 <artifactId>wechatpay-apache-httpclient</artifactId>
                 <version>0.4.8</version>
+            </dependency>
+            <!--强制指定Apache HttpClient 5版本：OSS v2 SDK运行时需要org.apache.hc.client5.http.config.ConnectionConfig，该class只在5.2~5.3.x存在，5.5已移除-->
+            <dependency>
+                <groupId>org.apache.httpcomponents.client5</groupId>
+                <artifactId>httpclient5</artifactId>
+                <version>5.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents.core5</groupId>
+                <artifactId>httpcore5</artifactId>
+                <version>5.3.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents.core5</groupId>
+                <artifactId>httpcore5-h2</artifactId>
+                <version>5.3.6</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
