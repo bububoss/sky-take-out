@@ -188,5 +188,15 @@ public class DishServiceImpl implements DishService {
         dishMapper.update(dish);
     }
 
+    /**
+     * 条件查询菜品
+     * @param dish
+     * @return
+     */
+    @Override
+    public List<Dish> list(Dish dish) {
+        return dishMapper.list(dish);
+    }
+
 }
 

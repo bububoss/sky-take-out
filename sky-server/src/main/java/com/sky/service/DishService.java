@@ -62,4 +62,11 @@ public interface DishService {
      */
     void startOrStop(Integer status, Long id);
 
+    /**
+     * 条件查询菜品
+     * @param dish
+     * @return
+     */
+    List<Dish> list(Dish dish);
+
 }
